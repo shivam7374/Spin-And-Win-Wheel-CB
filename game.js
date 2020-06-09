@@ -17,7 +17,7 @@ let game=new Phaser.Game(config)
 function preload(){
     // console.log(scene)
     // console.log("In preload") 
-    this.load.image('background',"/Assets/back.jpg")
+    this.load.image('background',"/Assets/back3.jpeg")
     this.load.image('stand',"Assets/stand.png");
     this.load.image('wheel',"Assets/wheel.png");
     this.load.image('pin',"Assets/pin.png");
@@ -31,7 +31,7 @@ function create(){
     let W = game.config.width;
     let H = game.config.height;
     
-    this.add.sprite(0,0,'background');
+    this.add.sprite(0,0,'background').setScale(2);
     
     this.button=this.add.sprite(W/4,H/2,'button').setScale(0.15).setInteractive({
         cursor: 'pointer'
